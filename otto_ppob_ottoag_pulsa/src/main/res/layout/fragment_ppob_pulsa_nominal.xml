@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_three"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/rb_pra"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/ocean_blue"
+                android:checked="true"
+                android:paddingLeft="16dp"
+                android:text="Pra-Bayar" />
+
+            <RadioButton
+                android:id="@+id/rb_pasca"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/ocean_blue"
+                android:paddingLeft="16dp"
+                android:text="Pasca-Bayar" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_checkfav"
+            style="@style/TextView12spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/border_blue_line"
+            android:padding="8dp"
+            android:text="Lihat Favorit"
+            android:textColor="@color/ocean_blue"
+            android:visibility="visible" />
+
+
+        <glenn.base.viewmodule.editText.KudaEdittext
+            android:id="@+id/ket_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:customLayout="@layout/cw_edittext_b"
+            app:inputType="2"
+            app:title="Masukkan Nomor Ponsel Anda" />
+
+        <FrameLayout
+            android:id="@+id/fl_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <CheckBox
+                android:id="@+id/cb_savefav"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:buttonTint="@color/ocean_blue"
+                android:padding="8dp"
+                android:text="Simpan nomor Favorit"
+                android:textColor="@color/ocean_blue"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_action"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/button_blue"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="8dp"
+                android:text="Proses"
+                android:textColor="@color/color_white"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/elayout_pra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:descendantFocusability="blocksDescendants"
+            app:el_expanded="true">
+
+            <com.otto.mart.viewmodule.view.ProductPickerViewGroup
+                android:id="@+id/rv_pra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/elayout_pasca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:descendantFocusability="blocksDescendants"
+            app:el_expanded="false">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_pasca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+</FrameLayout>

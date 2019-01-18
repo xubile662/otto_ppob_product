@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_three"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/rb_pra"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/ocean_blue"
+                android:checked="true"
+                android:paddingLeft="16dp"
+                android:text="Pra-Bayar" />
+
+            <RadioButton
+                android:id="@+id/rb_pasca"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/ocean_blue"
+                android:paddingLeft="16dp"
+                android:text="Pasca-Bayar" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/favorite"
+            style="@style/TextView12spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="-16dp"
+            android:background="@drawable/border_blue_line"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"
+            android:text="Lihat Favorit"
+            android:textColor="@color/ocean_blue"
+            android:visibility="gone" />
+
+        <glenn.base.viewmodule.editText.KudaEdittext
+            android:id="@+id/ket_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="8dp"
+            app:customLayout="@layout/cw_edittext_b"
+            app:inputType="2"
+            app:title="Masukkan Nomor Telkom Anda" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_savefav"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:buttonTint="@color/ocean_blue"
+                android:text="Simpan nomor Favorit"
+                android:textColor="@color/ocean_blue"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/process"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/button_blue"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="8dp"
+                android:text="Proses"
+                android:textColor="@color/color_white"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/elayout_pra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:descendantFocusability="blocksDescendants"
+            app:el_expanded="false">
+
+            <com.otto.mart.viewmodule.view.ProductPickerViewGroup
+                android:id="@+id/init"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/elayoutLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:descendantFocusability="blocksDescendants"
+            app:el_expanded="false">
+
+            <ProgressBar
+                android:id="@+id/loading"
+                style="@style/CircleLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/elayout_pasca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:descendantFocusability="blocksDescendants"
+            app:el_expanded="true">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_pasca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+</FrameLayout>

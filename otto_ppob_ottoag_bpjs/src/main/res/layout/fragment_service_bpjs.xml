@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextView12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Pilih Jenis Produk"
+            android:textColor="@color/charcoal_grey" />
+
+        <com.otto.mart.viewmodule.view.ProductPickerViewGroup
+            android:id="@+id/init"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:nestedScrollingEnabled="true" />
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/eLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_expanded="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_checkfav"
+                    style="@style/TextView12spbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/border_blue_line"
+                    android:padding="8dp"
+                    android:text="Lihat Favorit"
+                    android:textColor="@color/ocean_blue"
+                    android:visibility="visible" />
+
+                <glenn.base.viewmodule.editText.KudaEdittext
+                    android:id="@+id/ket_custid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:customLayout="@layout/cw_edittext_b"
+                    app:title="Masukkan Nomor Kepesertaan Anda" />
+
+                <glenn.base.viewmodule.editText.KudaEdittext
+                    android:id="@+id/ket_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:visibility="gone"
+                    app:customLayout="@layout/cw_edittext_b"
+                    app:maxLength="2"
+                    app:title="Masukkan Jumlah Bulan yang dibayar" />
+
+                <CheckBox
+                    android:id="@+id/cb_savefav"
+                    style="@style/TextView12spbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="-16dp"
+                    android:buttonTint="@color/ocean_blue"
+                    android:text="Simpan nomor Favorit"
+                    android:textColor="@color/ocean_blue"
+                    android:visibility="visible" />
+
+
+                <com.otto.mart.viewmodule.layout.HidableBankSpinnerView
+                    android:id="@+id/hsv_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:hideKeyboard="true"
+                    app:title="Dibayar Sampai Bulan:" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+                    
+                    <TextView
+                        android:id="@+id/process"
+                        style="@style/TextView12spbold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/button_blue"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="8dp"
+                        android:text="Proses"
+                        android:textColor="@color/color_white"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/elayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:el_expanded="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <glenn.base.viewmodule.textView.LazyTextview
+                    android:id="@+id/ltv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:customLayout="@layout/cw_textview_h"
+                    app:title="Nama" />
+
+                <glenn.base.viewmodule.textView.LazyTextview
+                    android:id="@+id/ltv_va"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:customLayout="@layout/cw_textview_h"
+                    app:title="No. VA Keluarga" />
+
+                <glenn.base.viewmodule.textView.LazyTextview
+                    android:id="@+id/ltv_prduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:customLayout="@layout/cw_textview_h"
+                    app:title="Produk" />
+
+                <glenn.base.viewmodule.textView.LazyTextview
+                    android:id="@+id/ltv_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:customLayout="@layout/cw_textview_h"
+                    app:title="Periode" />
+
+                <glenn.base.viewmodule.textView.LazyTextview
+                    android:id="@+id/ltv_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:customLayout="@layout/cw_textview_h"
+                    app:title="Tagihan" />
+            </LinearLayout>
+
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/elayoutLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:paddingBottom="8dp"
+            app:el_expanded="false">
+
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="@style/CircleLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="false" />
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/elayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:paddingBottom="8dp"
+            app:el_expanded="false">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_let"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_three"></View>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:background="@color/white_five"></View>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

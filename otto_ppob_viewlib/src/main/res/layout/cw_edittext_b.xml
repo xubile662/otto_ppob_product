@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/TextView12spbold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Title"
+        android:textColor="@color/charcoal_grey" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_edittext"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <EditText
+            android:id="@+id/content"
+            style="@style/TextView16spbold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text=""
+            android:textColor="@color/charcoal_grey"
+            android:textColorHint="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/imgv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:maxHeight="30dp"
+            android:maxWidth="30dp"
+            android:minHeight="30dp"
+            android:minWidth="30dp"
+            android:scaleType="center" />
+    </FrameLayout>
+
+
+</LinearLayout>

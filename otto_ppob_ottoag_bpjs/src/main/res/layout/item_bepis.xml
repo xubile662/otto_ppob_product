@@ -1,0 +1,67 @@
+<com.otto.mart.ui.component.CheckableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/hitbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_gey_line"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/product_price"
+                style="@style/TextView12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:maxLines="1"
+                android:maxWidth="125dp"
+                android:text="Product price"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/product_discount_price"
+                style="@style/TextView14spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:maxLines="1"
+                android:maxWidth="125dp"
+                android:text="Product price"
+                android:textColor="@color/ocean_blue"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/product_imgv"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:minWidth="66dp"
+            android:scaleType="centerInside"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/product_name"
+        style="@style/TextView12spbold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:maxWidth="114dp"
+        android:text="Product name extended for 2 lines"
+        android:textColor="@color/charcoal_grey"
+        android:visibility="visible" />
+</com.otto.mart.ui.component.CheckableLayout>
