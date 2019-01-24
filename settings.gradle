@@ -1,4 +1,5 @@
-include ':app', ':otto_ppob_viewlib',
+include ':app',
+        ':otto_ppob_viewlib',
         ':otto_ppob_ottoag_pulsa',
         ':otto_ppob_ottoag_bpjs',
         ':otto_ppob_ottoag_education',
